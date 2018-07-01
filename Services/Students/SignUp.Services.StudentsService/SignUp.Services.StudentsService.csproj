@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>SignUp.Services.Students.StudentsService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Models\SignUp.Models.StudentModel\SignUp.Models.StudentModel.csproj" />
+    <ProjectReference Include="..\..\..\Repositories\SignUp.Repositories.StudentRepository\SignUp.Repositories.StudentRepository.csproj" />
+  </ItemGroup>
+</Project>

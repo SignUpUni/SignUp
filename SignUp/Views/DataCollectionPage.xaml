@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SignUp.Views.DataCollectionPage"
+             Padding="30"
+             BackgroundColor="#e8eaf6">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" Margin="0,50,0,0"
+                     Orientation="Vertical">
+            
+                <Label FontSize="Large" Text="New student" 
+                       HorizontalTextAlignment="Center"
+                       TextColor="#1a237e"/>
+
+                <Entry x:Name="EditorFirstName" MaxLength="254" 
+                        Margin="0,25,0,0" Placeholder="First name"
+                        Keyboard="Text" IsSpellCheckEnabled="false"
+                        TextColor="#1a237e"
+                        Text="{Binding FirstName,Mode=TwoWay}"/>
+
+                <Entry x:Name="EditorLastName" MaxLength="254" 
+                        Margin="0,25,0,0" Placeholder="Second name"
+                        Keyboard="Text" IsSpellCheckEnabled="false"
+                        TextColor="#1a237e"
+                        Text="{Binding LastName,Mode=TwoWay}"/>
+
+                <Picker x:Name="PickerGender" Margin="0,25,0,0" 
+                    TextColor="#1a237e"
+                    SelectedIndexChanged="OnGenderSelectedIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Male</x:String>
+                            <x:String>Female</x:String>
+                            <x:String>Other</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Entry x:Name="EditorEmailAddress" MaxLength="254" 
+                        Margin="0,25,0,0" Placeholder="Email address"
+                        Keyboard="Email" IsSpellCheckEnabled="false"
+                        TextColor="#1a237e"
+                        Text="{Binding EmailAddress,Mode=TwoWay}"/>
+
+                <Picker x:Name="PickerUniversity" Margin="0,25,0,0" 
+                    TextColor="#1a237e"
+                    SelectedIndexChanged="OnUniversitySelectedIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>University of Nottingham</x:String>
+                            <x:String>Nottingham Trent University</x:String>
+                            <x:String>University of Birmingham</x:String>
+                            <x:String>Birmingham City University</x:String>
+                            <x:String>Unspecified</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Button x:Name="ButtonSave" Margin="0,25,0,0" Text="Save"
+                        BackgroundColor="#c5cae9" TextColor="#1a237e"
+                        Command="{Binding SaveDataCommand}"/>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Models\SignUp.Models.StudentModel\SignUp.Models.StudentModel.csproj" />
+    <ProjectReference Include="..\..\Components\SignUp.Components.DataStore\SignUp.Components.DataStore.csproj" />
+  </ItemGroup>
+</Project>

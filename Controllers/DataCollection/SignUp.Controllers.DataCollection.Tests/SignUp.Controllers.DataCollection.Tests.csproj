@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SignUp.Controllers.DataCollection\SignUp.Controllers.DataCollection.csproj" />
+    <ProjectReference Include="..\..\..\Services\Students\SignUp.Services.StudentsService\SignUp.Services.StudentsService.csproj" />
+    <ProjectReference Include="..\..\..\Models\SignUp.Models.StudentModel\SignUp.Models.StudentModel.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
+    <PackageReference Include="Moq" Version="4.8.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.2" />
+  </ItemGroup>
+</Project>

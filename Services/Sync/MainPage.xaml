@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SignUp.Views.MainPage"
+             Padding="15,30,10,20"
+             BackgroundColor="#e8eaf6">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+
+            <Button x:Name="ButtonSync" Text="Sync" VerticalOptions="Center" 
+                    HorizontalOptions="Center" TextColor="Blue" 
+                    BackgroundColor="Red"/>
+            
+            <Button x:Name="ButtonDataCollection" Text="Data" VerticalOptions="Center" 
+                    HorizontalOptions="Center" TextColor="Blue" 
+                    BackgroundColor="Lime"
+                    Clicked="OnButtonDataCollectionTapped"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
